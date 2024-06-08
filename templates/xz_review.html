@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>美味食堂 - 评论展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .header a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 15px;
+            background-color: #ff5e62;
+            border-radius: 5px;
+        }
+        .header a:hover {
+            background-color: #e85558;
+        }
+        .comments {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .comment {
+            padding: 10px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .comment:last-child {
+            border-bottom: none;
+        }
+        .comment p {
+            margin: 0;
+        }
+        .add-comment {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .add-comment textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            margin-bottom: 10px;
+        }
+        .add-comment button {
+            color: #ffffff;
+            padding: 10px 20px;
+            background-color: #ff5e62;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-comment button:hover {
+            background-color: #e85558;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <a href="xz_info.html">返回</a>
+    </div>
+    <h1 style="color: #ffffff; text-align: center;">评论展示</h1>
+    
+    <div class="comments">
+        <div class="comment">
+            <p><strong>用户1:</strong> 这家食堂的水饺非常美味！</p>
+        </div>
+        <div class="comment">
+            <p><strong>用户2:</strong> 服务很好，环境也很干净。</p>
+        </div>
+        <div class="comment">
+            <p><strong>用户3:</strong> 菜品种类很多，价格也很实惠。</p>
+        </div>
+        <!-- 其他评论可以仿照上面这个div结构继续添加 -->
+    </div>
+    
+    <div class="add-comment">
+        <h2>发表评论</h2>
+        <form action="." method="post">
+            <textarea name="comment" placeholder="写下您的评论..."></textarea>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>美味食堂 - 食堂信息展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .header a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 15px;
+            background-color: #ff5e62;
+            border-radius: 5px;
+        }
+        .header a:hover {
+            background-color: #e85558;
+        }
+        .canteen {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        .canteen-info {
+            color: #333333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+    </div>
+    <h1 style="color: #ffffff; text-align: center;">食堂信息展示</h1>
+    <div class="canteen">
+        <a href="zdx_info/">
+            <img src="{% static 'mwst/images/zdx.jpg' %}" alt="紫丁香餐吧">
+        </a>
+        <div class="canteen-info">
+            <h2>紫丁香餐吧</h2>
+            <p>位置：诚意楼边</p>
+            <p>营业时间：11:00 - 19:00</p>
+        </div>
+    </div>
+    <div class="canteen">
+        <a href="xs_info/">
+            <img src="{% static 'mwst/images/xs.jpg' %}" alt="学士楼">
+        </a>
+        <div class="canteen-info">
+            <h2>学士楼</h2>
+            <p>位置：紫丁香旁边</p>
+            <p>营业时间：07:00 - 19:00</p>
+        </div>
+    </div>
+    <div class="canteen">
+        <a href="xy_info/">
+            <img src="{% static 'mwst/images/xy.jpg' %}" alt="学苑楼">
+        </a>
+        <div class="canteen-info">
+            <h2>学苑楼</h2>
+            <p>位置：正心楼旁边</p>
+            <p>营业时间：7:00 - 19:00</p>
+        </div>
+    </div>
+    <div class="canteen">
+        <a href="xz_info/">
+            <img src="{% static 'mwst/images/xz.jpg' %}" alt="学子楼">
+        </a>
+        <div class="canteen-info">
+            <h2>学子楼</h2>
+            <p>位置：校园东区</p>
+            <p>营业时间：11:00 - 19:00</p>
+        </div>
+    </div>
+</body>
+</html>

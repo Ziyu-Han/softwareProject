@@ -1,0 +1,70 @@
+login.html<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美味食堂 - 用户登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5e62;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #e85558;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #ff5e62;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>美味食堂</h1>
+        <form action="mwst/login/" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="用户名" name="user" required>
+            <input type="password" placeholder="密码" name="pwd" required>
+            <button type="submit">登录</button>
+            <a href="toRegister/">注册</a>
+            <a href="#">忘记密码？</a>
+        </form>
+    </div>
+</body>
+</html>
